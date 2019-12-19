@@ -312,6 +312,7 @@ class Bot(LoggingClass):
                         if member.nick:
                             content = content.replace(member.mention, '', 1)
                         content = content.replace(member.user.mention, '', 1)
+                        content = content.replace(member.user.mention_nickname, '', 1)
                 else:
                     content = content.replace(self.client.state.me.mention, '', 1)
             elif mention_everyone:
